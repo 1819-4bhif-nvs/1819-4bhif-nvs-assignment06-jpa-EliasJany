@@ -9,7 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("zoo")
+@Path("Zoo")
 @Stateless
 public class ZooEndpoint {
 
@@ -37,14 +37,14 @@ public class ZooEndpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/Ort/{Ort}")
-    public Zoo getZooByOrt(@PathParam("Ort") int ort) {
+    public Zoo getZooByOrt(@PathParam("Ort") String ort) {
         return em.createNamedQuery("Zoo.findByOrt", Zoo.class).setParameter("Ort", ort).getSingleResult();
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/direktor/{direktor}")
-    public Zoo getZooByDirektor(@PathParam("direktor") int direktor) {
+    public Zoo getZooByDirektor(@PathParam("direktor") String direktor) {
         return em.createNamedQuery("Zoo.findByDirektor", Zoo.class).setParameter("direktor", direktor).getSingleResult();
     }
 
@@ -55,7 +55,7 @@ public class ZooEndpoint {
     }
 
     @DELETE
-    @Path("{id}")
+    @Path("delete/{id}")
     public void deleteZoo(@PathParam("id") long id) {
         Zoo c = em.find(Zoo.class, id);
         if(c != null) {
