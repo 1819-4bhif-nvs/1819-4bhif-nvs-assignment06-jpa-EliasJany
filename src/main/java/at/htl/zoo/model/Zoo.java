@@ -24,6 +24,9 @@ public class Zoo {
         this.direktor = direktor;
     }
 
+    public Zoo(){
+    }
+
     public Long getId() { return id; }
 
     public String getName() {

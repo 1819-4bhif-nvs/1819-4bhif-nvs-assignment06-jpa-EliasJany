@@ -34,6 +34,9 @@ public class Tier {
         Alter = alter;
     }
 
+    public Tier(){
+    }
+
     public String getName() {
         return Name;
     }

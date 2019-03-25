@@ -27,6 +27,9 @@ public class Tierpfleger extends Person{
         this.Arbeitsstelle = Arbeitsstelle;
     }
 
+    public Tierpfleger(){
+    }
+
     @Override
     public Long getId() {
         return id;

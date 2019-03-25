@@ -3,6 +3,6 @@ package at.htl.zoo.rest;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("api")
+@ApplicationPath("rs")
 public class RestConfig extends Application {
 }

@@ -9,6 +9,7 @@ import javax.persistence.*;
         @NamedQuery(name = "Direktor.findByArbeitsstelle", query = "select c from Direktor c where c.zoo = :zoo"),
         @NamedQuery(name = "Direktor.findByGehalt", query = "select c from Direktor c where c.gehalt = :gehalt")
 })
+
 public class Direktor extends Person{
 
     @Id
@@ -16,6 +17,9 @@ public class Direktor extends Person{
     private Long id;
 
     public Direktor(String Vorname, String Nachname, Integer Gehalt){super(Vorname,Nachname,Gehalt);}
+
+    public Direktor(){
+    }
 
     @Override
     public Long getId() {

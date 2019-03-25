@@ -15,6 +15,8 @@ public class Gehege {
     private Long id;
 
     public Zoo zoo;
+
+
     public List<Tier> tiere;
 
     public Gehege(Zoo zoo) {
@@ -24,6 +26,9 @@ public class Gehege {
     public Gehege(Zoo zoo,List<Tier> tiere) {
         this.zoo = zoo;
         this.tiere = tiere;
+    }
+
+    public Gehege() {
     }
 
     public Long getId() { return id; }
